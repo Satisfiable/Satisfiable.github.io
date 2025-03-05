@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="technical_service.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>TÜRKOĞLU JENERATÖR</title>
+  </head>
+  <body>
+    <nav id="navigation">
+      <div id="navigation-premiere">
+        <h1>
+          <a href="index.html"><span>TÜRKOĞLU</span> <span>JENERATÖR</span></a>
+        </h1>
+        <button id="sidebar-button" type="button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <ul id="main-navigation">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="generators.html">Jeneratörler</a></li>
+        <li><a href="technical_service.html">Teknik Servis</a></li>
+        <li>
+          <a href="contact.html" id="nav-button" class="sig-button"
+            >BİZE ULAŞ</a
+          >
+        </li>
+        <li id="contact-icon-nav">
+          <a href="contact.html"><i class="fa-solid fa-envelope"></i></a>
+        </li>
+      </ul>
+      <ul id="side-navigation">
+        <div id="side-premiere">
+          <h1>
+            <a href="index.html"
+              ><span>TÜRKOĞLU</span> <span>JENERATÖR</span></a
+            >
+          </h1>
+          <button id="fallback" type="button">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+        </div>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="generators.html">Jeneratörler</a></li>
+        <li><a href="technical_service.html">Teknik Servis</a></li>
+        <li>
+          <a href="contact.html">Bize Ulaş</a>
+        </li>
+      </ul>
+      <script>
+        var navigation_premiere = document.getElementById(
+          "navigation-premiere"
+        );
+
+        var side_navigation = document.getElementById("side-navigation");
+
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .getElementById("sidebar-button")
+            .addEventListener("click", function () {
+              navigation_premiere.style.display = "none";
+
+              side_navigation.style.display = "flex";
+
+              document.getElementById("fallback").style.display =
+                "inline-block";
+
+              document.body.style.overflow = "hidden";
+
+              navigation.style.padding = "0";
+
+              navigation.style.height = "100%";
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .getElementById("fallback")
+            .addEventListener("click", function () {
+              navigation_premiere.style.display = "flex";
+              side_navigation.style.display = "none";
+              document.getElementById("fallback").style.display = "none";
+              document.body.style.overflow = "auto";
+              navigation.style.padding = "0.7rem 0.7rem";
+              navigation.style.height = "auto";
+            });
+        });
+      </script>
+    </nav>
+    <main>
+      <div id="assistance-wrapper">
+        <h2>Jeneratör Tamiri ve Bakımı</h2>
+        <p>
+          <span id="assistance-catchphrase"
+            >Jeneratörünüz mü arızalandı ya da bakıma mı ihtiyaç duyuyor?
+            Endişelenmeyin, biz buradayız!</span
+          >
+          Uzman ekibimiz, yağ değişimi, filtre bakımı ve motor kontrolleri gibi
+          işlemleri titizlikle yaparak jeneratörünüzün verimli çalışmasını
+          sağlar. Arıza durumlarında ise hızlı bir şekilde müdahale eder ve
+          sorununuzu en kısa sürede çözeriz. Jeneratörünüzü bize güvenle teslim
+          edebilir, kesintisiz enerji için destek alabilirsiniz.
+        </p>
+        <a href="contact.html">Destek al!</a>
+      </div>
+      <div id="accordion-container">
+        <h3>Sıkça sorulan sorular</h3>
+        <div id="accordion-body">
+          <button class="accordion-button">
+            Jeneratörüm çalışmıyor, ne yapmalıyım?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Jeneratörünüz çalışmıyorsa, yakıt seviyesi ve bataryayı kontrol
+              etmenizi öneririz. Sorun devam ederse, bir profesyonelden yardım
+              almanız faydalı olacaktır.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörüm fazla ses yapıyor, bu normal mi?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Bir miktar ses normal olabilir, ancak sesin artması bir arıza
+              belirtisi olabilir. Durumu kontrol ettirmek için bir uzmandan
+              destek alabilirsiniz.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörüm fazla yakıt harcıyor, neden?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Yüksek yakıt tüketimi, verimlilik kaybına işaret edebilir. Bakım
+              yapılması gerekebilir, bu konuda bir profesyonelden yardım
+              alabilirsiniz.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörüm duman çıkarıyor, ne yapmalıyım?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Duman, aşırı ısınma veya sistemde bir arıza olduğunu gösterebilir.
+              Güvenliğiniz için cihazı kapatın ve bir uzmandan yardım alarak
+              durumu kontrol ettirin.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörümün bakımını ne sıklıkla yapmalıyım?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Genellikle her 100 saatte bir bakım önerilir. Düzenli bakım
+              yaptırarak cihazınızın ömrünü uzatabilirsiniz.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörümün ömrünü nasıl uzatabilirim?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Jeneratörünüzün ömrünü uzatmak için düzenli bakım ve temizlik
+              önemlidir. Bakım için profesyonel bir teknik servis ile görüşmeniz
+              tavsiye edilir.
+            </p>
+          </div>
+          <button class="accordion-button">
+            Jeneratörüm sürekli duruyor, ne yapmalıyım?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Jeneratörün sürekli durması, yakıt sisteminde veya motor
+              bağlantılarında bir problem olduğunu gösterebilir. Sorunun tespiti
+              için bir profesyonelden yardım alabilirsiniz.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörümün ekranında hata kodu görünüyor, bu ne anlama geliyor?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Hata kodu, jeneratörde bir arıza olduğunu belirten bir uyarıdır.
+              Kodu anlamak için cihazın kullanım kılavuzuna başvurabilir veya
+              bir teknik servis ile iletişime geçebilirsiniz.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörümde akü problemi yaşıyorum, ne yapmalıyım?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Akü problemi, ya akünün şarj edilmemesi ya da ömrünün dolmuş
+              olmasından kaynaklanıyor olabilir. Akü değişimi veya şarj işlemi
+              için teknik servis desteği alabilirsiniz.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörümde yakıt tasarrufu sağlamak için ne yapabilirim?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Yakıt tasarrufu sağlamak için jeneratörün düzenli bakımını
+              yaptırmak, filtreleri temiz tutmak ve verimli kullanım sağlamak
+              önemlidir. Ayrıca, fazla yükten kaçınarak daha verimli çalışmasını
+              sağlayabilirsiniz.
+            </p>
+          </div>
+
+          <button class="accordion-button">
+            Jeneratörüm çok ısındı, ne yapmalıyım?
+          </button>
+          <div class="accordion-text">
+            <p>
+              Jeneratörün aşırı ısınması, soğutma sistemiyle ilgili bir sorun
+              olabileceğini gösterir. Hemen kapatın ve soğumasını bekledikten
+              sonra bir teknisyenden yardım alarak durumu kontrol ettirin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="social-media-footer">
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+      </div>
+      <div id="headline-footer">
+        <h6>TÜRKOĞLU JENERATÖR<span>©</span></h6>
+      </div>
+      <div id="contact-footer">
+        <div id="location-footer">
+          <a href="https://maps.app.goo.gl/82dYEoxQu5fKtQ1P7" target="_blank"
+            ><i class="fa-solid fa-location-dot"></i>
+            <span>
+              Ostim Osb Cevat Dündar Cad. Kavacıklı İş Mrk. No 17/8
+              Yenimahalle/ANKARA
+            </span></a
+          >
+        </div>
+        <div id="phone-numbers-footer">
+          <div id="number-1-footer">
+            <a href="tel:+905393202853"
+              ><i class="fa-solid fa-phone"></i>+90 539 320 28 53</a
+            >
+          </div>
+          <div id="number-2-footer">
+            <a href="tel:+903123542853"
+              ><i class="fa-solid fa-phone"></i>+90 312 354 28 53</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="technical_service.js"></script>
+  </body>
+</html>

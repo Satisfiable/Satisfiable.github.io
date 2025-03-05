@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>TÜRKOĞLU JENERATÖR</title>
+  </head>
+  <body>
+    <nav id="navigation">
+      <div id="navigation-premiere">
+        <h1>
+          <a href="index.html"><span>TÜRKOĞLU</span> <span>JENERATÖR</span></a>
+        </h1>
+        <button id="sidebar-button" type="button">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+      <ul id="main-navigation">
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="generators.html">Jeneratörler</a></li>
+        <li><a href="technical_service.html">Teknik Servis</a></li>
+        <li>
+          <a href="contact.html" id="nav-button" class="sig-button"
+            >BİZE ULAŞ</a
+          >
+        </li>
+        <li id="contact-icon-nav">
+          <a href="contact.html"><i class="fa-solid fa-envelope"></i></a>
+        </li>
+      </ul>
+      <ul id="side-navigation">
+        <div id="side-premiere">
+          <h1>
+            <a href="index.html"
+              ><span>TÜRKOĞLU</span> <span>JENERATÖR</span></a
+            >
+          </h1>
+          <button id="fallback" type="button">
+            <i class="fa-solid fa-rotate-left"></i>
+          </button>
+        </div>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="generators.html">Jeneratörler</a></li>
+        <li><a href="technical_service.html">Teknik Servis</a></li>
+        <li>
+          <a href="contact.html">Bize Ulaş</a>
+        </li>
+      </ul>
+      <script>
+        var navigation_premiere = document.getElementById(
+          "navigation-premiere"
+        );
+
+        var side_navigation = document.getElementById("side-navigation");
+
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .getElementById("sidebar-button")
+            .addEventListener("click", function () {
+              navigation_premiere.style.display = "none";
+
+              side_navigation.style.display = "flex";
+
+              document.getElementById("fallback").style.display =
+                "inline-block";
+
+              document.body.style.overflow = "hidden";
+
+              navigation.style.padding = "0";
+
+              navigation.style.height = "100%";
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+          document
+            .getElementById("fallback")
+            .addEventListener("click", function () {
+              navigation_premiere.style.display = "flex";
+              side_navigation.style.display = "none";
+              document.getElementById("fallback").style.display = "none";
+              document.body.style.overflow = "auto";
+              navigation.style.padding = "0.7rem 0.7rem";
+              navigation.style.height = "auto";
+            });
+        });
+      </script>
+    </nav>
+    <main>
+      <div id="text-information">
+        <h2>İLETİŞİM</h2>
+        <div id="text-location">
+          <a href="https://maps.app.goo.gl/82dYEoxQu5fKtQ1P7" target="_blank">
+            <span>
+              Ostim Osb Cevat Dündar Cad. Kavacıklı İş Mrk. No 17/8
+              Yenimahalle/ANKARA
+            </span></a
+          >
+        </div>
+        <div id="text-phone-numbers">
+          <a href="tel:+905393202853"
+            ><i class="fa-solid fa-phone"></i>+90 539 320 28 53</a
+          >
+          <br />
+          <a href="tel:+903123542853"
+            ><i class="fa-solid fa-phone"></i>+90 312 354 28 53</a
+          >
+        </div>
+        <div id="text-mail">
+          <a href="mailto:xxx@gmail.com"
+            ><i class="fa-solid fa-envelope"></i><span>xxx@gmail.com</span></a
+          >
+        </div>
+        <div id="contact-box">
+          <form id="contact-form" name="contact-form">
+            <div>
+              <i class="fa-solid fa-envelope-open-text"></i>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="İsim"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-posta"
+                required
+                autocomplete="on"
+              />
+              <input type="submit" id="submit" value="Gönder" />
+            </div>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Mesajınız"
+              required
+            ></textarea>
+          </form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script>
+          (function () {
+            emailjs.init("8ntZm4ZHcCESO8FUe"); // Your Public Key
+          })();
+
+          document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault();
+
+              // Get values from form inputs
+              const formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+              };
+
+              // Send email
+              emailjs
+                .send("service_l7uzggb", "template_r4m4r7b", formData)
+                .then(function (response) {
+                  alert("E-posta başarıyla gönderildi!");
+                })
+                .catch(function (error) {
+                  alert("E-posta gönderilirken hata oluştu.");
+                  console.log(error);
+                });
+            });
+        </script>
+      </div>
+      <iframe
+        id="google-location"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.1794241204334!2d32.7440772!3d39.9820955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d3499252f5bb03%3A0x15de35bdbb3fce81!2zS2F2YWPEsWtsxLEgxLDFnyBNZXJrZXo!5e0!3m2!1str!2str!4v1739039380505!5m2!1str!2str"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </main>
+    <footer>
+      <div id="social-media-footer">
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+      </div>
+      <div id="headline-footer">
+        <h6>TÜRKOĞLU JENERATÖR<span>©</span></h6>
+      </div>
+      <div id="contact-footer">
+        <div id="location-footer">
+          <a href="https://maps.app.goo.gl/82dYEoxQu5fKtQ1P7" target="_blank"
+            ><i class="fa-solid fa-location-dot"></i>
+            <span>
+              Ostim Osb Cevat Dündar Cad. Kavacıklı İş Mrk. No 17/8
+              Yenimahalle/ANKARA
+            </span></a
+          >
+        </div>
+        <div id="phone-numbers-footer">
+          <div id="number-1-footer">
+            <a href="tel:+905393202853"
+              ><i class="fa-solid fa-phone"></i>+90 539 320 28 53</a
+            >
+          </div>
+          <div id="number-2-footer">
+            <a href="tel:+903123542853"
+              ><i class="fa-solid fa-phone"></i>+90 312 354 28 53</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

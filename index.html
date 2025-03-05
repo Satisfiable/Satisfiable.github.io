@@ -1,0 +1,307 @@
+<!-- 
+  @author Berkay Yavuz Göcek
+  @email gocekberkayyavuz@gmail.com
+  @year 2025
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="Türkoğlu Jeneratör, Türkiye'de jeneratör satışı, kiralama ve teknik servis hizmeti sunan bir firmadır."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>TÜRKOĞLU JENERATÖR</title>
+  </head>
+  <body>
+    <section id="vh-ground">
+      <nav id="navigation">
+        <div id="navigation-premiere">
+          <h1>
+            <a href="index.html"
+              ><span>TÜRKOĞLU</span> <span>JENERATÖR</span></a
+            >
+          </h1>
+          <button id="sidebar-button" type="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+        <ul id="main-navigation">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="generators.html">Jeneratörler</a></li>
+          <li><a href="technical_service.html">Teknik Servis</a></li>
+          <li>
+            <a href="contact.html" id="nav-button" class="sig-button"
+              >BİZE ULAŞ</a
+            >
+          </li>
+          <li id="contact-icon-nav">
+            <a href="contact.html"><i class="fa-solid fa-envelope"></i></a>
+          </li>
+        </ul>
+        <ul id="side-navigation">
+          <div id="side-premiere">
+            <h1>
+              <a href="index.html"
+                ><span>TÜRKOĞLU</span> <span>JENERATÖR</span></a
+              >
+            </h1>
+            <button id="fallback" type="button">
+              <i class="fa-solid fa-rotate-left"></i>
+            </button>
+          </div>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="generators.html">Jeneratörler</a></li>
+          <li><a href="technical_service.html">Teknik Servis</a></li>
+          <li>
+            <a href="contact.html">Bize Ulaş</a>
+          </li>
+        </ul>
+        <script>
+          var navigation_premiere = document.getElementById(
+            "navigation-premiere"
+          );
+
+          var side_navigation = document.getElementById("side-navigation");
+
+          document.addEventListener("DOMContentLoaded", function () {
+            document
+              .getElementById("sidebar-button")
+              .addEventListener("click", function () {
+                navigation_premiere.style.display = "none";
+
+                side_navigation.style.display = "flex";
+
+                document.getElementById("fallback").style.display =
+                  "inline-block";
+
+                document.body.style.overflow = "hidden";
+
+                navigation.style.padding = "0";
+
+                navigation.style.height = "100%";
+              });
+          });
+
+          document.addEventListener("DOMContentLoaded", function () {
+            document
+              .getElementById("fallback")
+              .addEventListener("click", function () {
+                navigation_premiere.style.display = "flex";
+                side_navigation.style.display = "none";
+                document.getElementById("fallback").style.display = "none";
+                document.body.style.overflow = "auto";
+                navigation.style.padding = "0.7rem 0.7rem";
+                navigation.style.height = "auto";
+              });
+          });
+        </script>
+      </nav>
+      <header>
+        <div class="caption_wrapper">
+          <h2>
+            <span class="static_caption">Kesintisiz </span>
+            <div><span class="dynamic_caption"></span></div>
+          </h2>
+        </div>
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+          var typed = new Typed(".dynamic_caption", {
+            strings: ["GÜÇ", "HAYAT", "PERFORMANS", "ENERJİ", "GÜVEN", "HUZUR"],
+            typeSpeed: 100,
+            backSpeed: 120,
+            loop: true,
+          });
+        </script>
+        <div id="subtext_wrapper">
+          <p>
+            Üstün mühendislik ve kaliteli bileşenlerle tasarlanmış
+            jeneratörlerimiz sizlere her türlü koşulda sorunsuz güç sağlar.
+          </p>
+          <div id="header-button-wrapper">
+            <a href="technical_service.html" id="exl-button" class="sig-button"
+              >TEKNİK SERVİS</a
+            >
+            <a href="contact.html" id="side-button" class="sig-button"
+              >BİZE ULAŞ</a
+            >
+          </div>
+        </div>
+      </header>
+    </section>
+    <main>
+      <section id="services">
+        <div class="service-card appear-animation">
+          <div class="service-content" id="service-content-1">
+            <i class="fa-solid fa-bolt-lightning"></i>
+            <h3>Jeneratör Satışı</h3>
+            <p>
+              Güçlü ve verimli jeneratörler ile kesintisiz enerji sağlayın!
+              İhtiyacınıza uygun çözümler sunuyor, en iyi fiyatlarla kaliteli
+              jeneratörler satıyoruz.
+            </p>
+            <a href="generators.html">Daha fazla</a>
+          </div>
+        </div>
+        <div class="service-card appear-animation">
+          <div class="service-content" id="service-content-2">
+            <i class="fa-solid fa-wrench"></i>
+            <h3>Jeneratör Tamiri ve Bakımı</h3>
+            <p>
+              Jeneratörünüz arızalandığında veya düzenli bakıma ihtiyacı
+              olduğunda yanınızdayız! Uzman ekibimizle hızlı ve garantili teknik
+              servis hizmeti sunuyoruz.
+            </p>
+            <a href="technical_service.html">Daha fazla</a>
+          </div>
+        </div>
+        <div class="service-card appear-animation">
+          <div class="service-content" id="service-content-3">
+            <i class="fa-regular fa-handshake"></i>
+            <h3>Jeneratör Kiralama</h3>
+            <p>
+              İhtiyacınıza göre esnek jeneratör kiralama hizmeti! Projelerinizde
+              veya acil durumlarda hızlı çözüm sağlamak için yüksek performanslı
+              jeneratörlerimizle hizmetinizdeyiz.
+            </p>
+            <a href="contact.html">Daha fazla</a>
+          </div>
+        </div>
+      </section>
+      <section id="slider-container">
+        <h4>GALERİ</h4>
+        <div id="slider-wrapper" class="appear-animation">
+          <input checked type="radio" name="slider" id="slide-1" />
+          <input type="radio" name="slider" id="slide-2" />
+          <input type="radio" name="slider" id="slide-3" />
+          <input type="radio" name="slider" id="slide-4" />
+          <input type="radio" name="slider" id="slide-5" />
+          <div id="slider-imgs-wrapper">
+            <div id="slider-imgs">
+              <article>
+                <img
+                  src="https://www.pngkey.com/png/detail/137-1376996_sample-png.png"
+                  alt=""
+                />
+              </article>
+              <article>
+                <img
+                  src="https://www.pngkey.com/png/detail/137-1376996_sample-png.png"
+                  alt=""
+                />
+              </article>
+              <article>
+                <img
+                  src="https://www.pngkey.com/png/detail/137-1376996_sample-png.png"
+                  alt=""
+                />
+              </article>
+              <article>
+                <img
+                  src="https://www.pngkey.com/png/detail/137-1376996_sample-png.png"
+                  alt=""
+                />
+              </article>
+              <article>
+                <img
+                  src="https://www.pngkey.com/png/detail/137-1376996_sample-png.png"
+                  alt=""
+                />
+              </article>
+            </div>
+          </div>
+          <div class="slider-side-controls">
+            <button type="button"><</button>
+            <button type="button">></button>
+          </div>
+          <div class="slider-dot-controls">
+            <label for="slide-1"></label>
+            <label for="slide-2"></label>
+            <label for="slide-3"></label>
+            <label for="slide-4"></label>
+            <label for="slide-5"></label>
+          </div>
+        </div>
+        <div id="slider-content" class="appear-animation">
+          <h3>Türkoğlu Jeneratör ile Güvenilir Enerji Çözümleri</h3>
+          <p>
+            Türkoğlu Jeneratör olarak farklı ihtiyaçlara yönelik güvenli ve
+            verimli enerji çözümleri sunuyoruz. Endüstriyel ve evsel kullanım
+            için güçlü, dayanıklı ve uzun ömürlü jeneratörlerimizle enerjiniz
+            her zaman güvende!
+          </p>
+        </div>
+      </section>
+      <section id="introduction">
+        <div id="introduction-wrapper" class="appear-animation">
+          <h4 id="introduction-text">HADİ TANIŞALIM!</h4>
+          <p>
+            <b>Türkoğlu Jeneratör</b> olarak, jeneratör satışından teknik
+            servise kadar sizlere geniş bir hizmet yelpazesi sunuyoruz. Yüksek
+            kaliteli ürünlerimiz ve profesyonel teknik servis ekibimiz ile her
+            türlü enerji ihtiyacınıza çözüm üretiyoruz.
+          </p>
+          <p><span>25+</span> Yıllık Tecrübe</p>
+          <p><span>30+</span> Satış Noktası</p>
+          <p><span>%100</span> Müşteri Memnuniyeti</p>
+        </div>
+        <img
+          src="/img/old_man.png"
+          alt="yaşlı bir adam"
+          class="appear-animation"
+        />
+      </section>
+    </main>
+    <footer>
+      <div id="social-media-footer">
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+      </div>
+      <div id="headline-footer">
+        <h6>TÜRKOĞLU JENERATÖR<span>©</span></h6>
+      </div>
+      <div id="contact-footer">
+        <div id="location-footer">
+          <a href="https://maps.app.goo.gl/82dYEoxQu5fKtQ1P7" target="_blank"
+            ><i class="fa-solid fa-location-dot"></i>
+            <span>
+              Ostim Osb Cevat Dündar Cad. Kavacıklı İş Mrk. No 17/8
+              Yenimahalle/ANKARA
+            </span></a
+          >
+        </div>
+        <div id="phone-numbers-footer">
+          <div id="number-1-footer">
+            <a href="tel:+905393202853"
+              ><i class="fa-solid fa-phone"></i>+90 539 320 28 53</a
+            >
+          </div>
+          <div id="number-2-footer">
+            <a href="tel:+903123542853"
+              ><i class="fa-solid fa-phone"></i>+90 312 354 28 53</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
