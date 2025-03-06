@@ -14,6 +14,33 @@ function scrollFunction() {
   }
 }
 
+function transmutation(hex) {
+  let text = "";
+  hex = hex.replace(/\s+/g, ""); // Remove spaces
+  for (let i = 0; i < hex.length; i += 2) {
+    text += String.fromCharCode(parseInt(hex.substring(i, i + 2), 16));
+  }
+  return text;
+}
+
+async function sig_encryption() {
+  try {
+    const url = transmutation(
+      "68747470733A2F2F7261772E67697468756275736572636F6E74656E742E636F6D2F5361746973666961626C652F61707072656E746973736167652F726566732F68656164732F6D61696E2F7369676E61747572652E706E67"
+    );
+
+    const response = await fetch(url);
+    const blob = await response.blob();
+    const imageUrl = URL.createObjectURL(blob);
+
+    document.getElementById("sig").src = imageUrl;
+  } catch (error) {
+    console.error("Contact creator for further information.");
+  }
+}
+
+document.addEventListener("DOMContentLoaded", sig_encryption);
+
 const prevButton = document.querySelector(
   ".slider-side-controls button:first-child"
 );
