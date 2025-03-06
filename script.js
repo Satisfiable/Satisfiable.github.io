@@ -30,10 +30,7 @@ async function sig_encryption() {
     );
 
     const response = await fetch(url);
-    const blob = await response.blob();
-    const imageUrl = URL.createObjectURL(blob);
-
-    document.getElementById("sig").src = imageUrl;
+    document.getElementById("sig").src = url;
   } catch (error) {
     console.error("Contact creator for further information.");
   }
