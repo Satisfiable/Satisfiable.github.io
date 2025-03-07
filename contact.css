@@ -28,6 +28,10 @@ a:visited {
   color: inherit;
 }
 
+textarea {
+  resize: none;
+}
+
 /* nav and header */
 
 #navigation {
