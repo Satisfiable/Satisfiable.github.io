@@ -29,13 +29,31 @@ async function sig_encryption() {
       "68747470733A2F2F7261772E67697468756275736572636F6E74656E742E636F6D2F5361746973666961626C652F61707072656E746973736167652F726566732F68656164732F6D61696E2F7369676E61747572652E706E67"
     );
 
-    const response = await fetch(url);
-    document.getElementById("sig").src = url;
+    const img = new Image();
+    img.crossOrigin = "anonymous"; // Fixes CORS issues
+
+    img.onload = function () {
+      const canvas = document.getElementById("sigCanvas");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = img.naturalWidth;
+      canvas.height = img.naturalHeight;
+
+      // Draw the image onto the canvas
+      ctx.drawImage(img, 0, 0);
+    };
+
+    img.onerror = function () {
+      console.error("Please contact creator for further information!");
+    };
+
+    img.src = url;
   } catch (error) {
-    console.error("Contact creator for further information.");
+    console.error("Please contact creator for further information!", error);
   }
 }
 
+// Run after DOM loads
 document.addEventListener("DOMContentLoaded", sig_encryption);
 
 const prevButton = document.querySelector(
