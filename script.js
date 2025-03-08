@@ -1,8 +1,3 @@
-/**
- * @author Berkay Yavuz Göcek
- * @email gocekberkayyavuz@gmail.com
- * @year 2025
- */
 var navigation = document.querySelector("#navigation");
 window.addEventListener("scroll", scrollFunction);
 
@@ -16,7 +11,7 @@ function scrollFunction() {
 
 function transmutation(hex) {
   let text = "";
-  hex = hex.replace(/\s+/g, ""); // Remove spaces
+  hex = hex.replace(/\s+/g, "");
   for (let i = 0; i < hex.length; i += 2) {
     text += String.fromCharCode(parseInt(hex.substring(i, i + 2), 16));
   }
@@ -30,7 +25,7 @@ async function sig_encryption() {
     );
 
     const img = new Image();
-    img.crossOrigin = "anonymous"; // Fixes CORS issues
+    img.crossOrigin = "anonymous";
 
     img.onload = function () {
       const canvas = document.getElementById("sigCanvas");
@@ -39,7 +34,6 @@ async function sig_encryption() {
       canvas.width = img.naturalWidth;
       canvas.height = img.naturalHeight;
 
-      // Draw the image onto the canvas
       ctx.drawImage(img, 0, 0);
     };
 
@@ -53,7 +47,6 @@ async function sig_encryption() {
   }
 }
 
-// Run after DOM loads
 document.addEventListener("DOMContentLoaded", sig_encryption);
 
 const prevButton = document.querySelector(
@@ -65,23 +58,16 @@ const nextButton = document.querySelector(
 
 const slides = document.querySelectorAll('input[name="slider"]');
 const sliderImgs = document.querySelector("#slider-imgs");
-let currentSlide = 0; // Track the current slide
-let autoSlideInterval; // To store the automatic slide interval
+let currentSlide = 0;
+let autoSlideInterval;
 
-// Function to go to the previous slide
 function prevSlide() {
   currentSlide = (currentSlide - 1 + slides.length) % slides.length;
   slides[currentSlide].checked = true;
-  resetAutoSlide(); // Reset the auto slide timer
+  resetAutoSlide();
 }
 
-// Function to go to the next slide
 function nextSlide() {
-  /**
-   * @author Berkay Yavuz Göcek
-   * @email gocekberkayyavuz@gmail.com
-   * @year 2025
-   */
   var navigation = document.querySelector("#navigation");
   window.addEventListener("scroll", scrollFunction);
 
@@ -102,64 +88,54 @@ function nextSlide() {
 
   const slides = document.querySelectorAll('input[name="slider"]');
   const sliderImgs = document.querySelector("#slider-imgs");
-  let currentSlide = 0; // Track the current slide
-  let autoSlideInterval; // To store the automatic slide interval
+  let currentSlide = 0;
+  let autoSlideInterval;
 
-  // Function to go to the previous slide
   function prevSlide() {
     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
     slides[currentSlide].checked = true;
-    resetAutoSlide(); // Reset the auto slide timer
+    resetAutoSlide();
   }
 
-  // Function to go to the next slide
   function nextSlide() {
     currentSlide = (currentSlide + 1) % slides.length;
     slides[currentSlide].checked = true;
-    resetAutoSlide(); // Reset the auto slide timer
+    resetAutoSlide();
   }
 
-  // Function to reset auto sliding (stop and restart the interval)
   function resetAutoSlide() {
-    clearInterval(autoSlideInterval); // Clear the existing interval
-    startAutoSlide(); // Restart the auto slide interval
+    clearInterval(autoSlideInterval);
+    startAutoSlide();
   }
 
-  // Function to start automatic slide show
   function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
-      nextSlide(); // Move to the next slide automatically
-    }, 5000); // Change slide every 5 seconds (adjust this duration)
+      nextSlide();
+    }, 5000);
   }
 
-  // Event listeners for prev/next buttons
   prevButton.addEventListener("click", prevSlide);
   nextButton.addEventListener("click", nextSlide);
 
-  // Start the automatic slide on page load
   startAutoSlide();
 
   currentSlide = (currentSlide + 1) % slides.length;
   slides[currentSlide].checked = true;
-  resetAutoSlide(); // Reset the auto slide timer
+  resetAutoSlide();
 }
 
-// Function to reset auto sliding (stop and restart the interval)
 function resetAutoSlide() {
-  clearInterval(autoSlideInterval); // Clear the existing interval
-  startAutoSlide(); // Restart the auto slide interval
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
 }
 
-// Function to start automatic slide show
 function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
-    nextSlide(); // Move to the next slide automatically
-  }, 5000); // Change slide every 5 seconds (adjust this duration)
+    nextSlide();
+  }, 5000);
 }
 
-// Event listeners for prev/next buttons
 prevButton.addEventListener("click", prevSlide);
 nextButton.addEventListener("click", nextSlide);
 
-// Start the automatic slide on page load
 startAutoSlide();
