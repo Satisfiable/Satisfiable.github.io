@@ -483,11 +483,10 @@ footer #contact-footer #number-1-footer {
     padding: 0;
     border-radius: 0;
     overflow: hidden;
-    transition: background 0.5s, padding 0.5s;
+    transition: background 0.5s;
   }
 
   .generator-selector.active {
-    padding: 0.7rem 1.5rem;
     background-color: rgba(0, 0, 0, 0.85);
   }
 
@@ -513,6 +512,9 @@ footer #contact-footer #number-1-footer {
 
   .generators {
     grid-template-columns: 1fr;
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
   }
 
   .inner-generator-box {
@@ -659,6 +661,10 @@ footer #contact-footer #number-1-footer {
     border-radius: 0;
     overflow: hidden;
     transition: background 0.5s;
+  }
+
+  .generator-selector.active {
+    background-color: rgba(0, 0, 0, 0.85);
   }
 
   .generator-selector::before {

@@ -19,7 +19,6 @@ function scrollFunction() {
       if (generatorDisplay === "grid") {
         const navigationHeight = getComputedStyle(navigation).height;
         selector.style.top = navigationHeight;
-        selector.classList.add("active");
       }
     } else {
       navigation.classList.remove("active");
@@ -27,7 +26,6 @@ function scrollFunction() {
       if (generatorDisplay === "grid") {
         const navigationHeight = getComputedStyle(navigation).height;
         selector.style.top = navigationHeight;
-        selector.style.background = "transparent";
       }
     }
   });
@@ -43,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector("main").style.marginTop = "10rem";
 
           if (window.scrollY > 50) {
-            selector.style.background = "rgba(0, 0, 0, 0.85)";
+            selector.classList.add("active");
           } else {
-            selector.style.background = "#090c1b";
+            selector.classList.remove("active");
           }
         } else {
           selector.style.display = "none";
