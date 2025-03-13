@@ -13,14 +13,13 @@ if (window.innerWidth <= 575) {
 function scrollFunction() {
   generator_selectors.forEach((selector) => {
     const generatorDisplay = getComputedStyle(selector).display;
-
     if (window.scrollY > 50) {
       navigation.classList.add("active");
 
       if (generatorDisplay === "grid") {
         const navigationHeight = getComputedStyle(navigation).height;
         selector.style.top = navigationHeight;
-        selector.style.background = "rgba(0, 0, 0, 0.85)";
+        selector.classList.add("active");
       }
     } else {
       navigation.classList.remove("active");

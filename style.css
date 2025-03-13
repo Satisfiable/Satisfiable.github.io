@@ -136,7 +136,7 @@ a:visited {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 85vw;
+  width: 95vw;
   padding: 0.7rem;
   margin: 0 auto;
 }
@@ -615,7 +615,7 @@ footer #contact-footer #number-1-footer {
   }
 
   #vh-ground #navigation.active {
-    padding: 0.6rem 1.5rem;
+    padding: 0.7rem 1.5rem;
   }
 
   #navigation-premiere {
