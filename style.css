@@ -67,7 +67,7 @@ a:visited {
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-size: 350%;
-  animation: splash-screen-title-animation 5s ease-in-out;
+  animation: splash-screen-title-animation 3s ease-in-out;
   pointer-events: none;
 }
 
