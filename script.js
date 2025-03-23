@@ -1,3 +1,22 @@
+history.scrollRestoration = "manual";
+window.onload = () => {
+  window.scrollTo(0, 0);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loading_page_title = document.querySelector(".splash-screen-title");
+  const loading_page = document.querySelector(".splash-screen");
+
+  loading_page.style.animationPlayState = "paused";
+
+  document.body.style.overflowY = "hidden";
+
+  loading_page_title.addEventListener("animationend", () => {
+    loading_page.style.animationPlayState = "running";
+    document.body.style.overflowY = "visible";
+  });
+});
+
 var navigation = document.querySelector("#navigation");
 window.addEventListener("scroll", scrollFunction);
 

@@ -17,6 +17,8 @@ body {
   gap: 8rem;
   background-color: #090c1b;
   color: #efefef;
+  position: relative;
+  overflow-x: hidden;
 }
 
 a:link {
