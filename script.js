@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   loading_page_title.addEventListener("animationend", () => {
     loading_page.style.animationPlayState = "running";
-    document.body.style.overflowY = "visible";
+    document.documentElement.style.overflowY = "auto";
   });
 });
 
