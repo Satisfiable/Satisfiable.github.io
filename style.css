@@ -17,14 +17,13 @@ body {
   font-family: "Noto Sans", serif;
   width: 100vw;
   height: 100%;
+  overflow-x: hidden;
   background-color: #090c1b;
   color: #efefef;
   display: grid;
   grid-template-areas: "header header" "main main" "footer footer";
   grid-template-rows: 100vh 6fr auto;
   gap: 8rem;
-  position: relative;
-  overflow-x: hidden;
 }
 
 a:link {
@@ -34,62 +33,6 @@ a:link {
 
 a:visited {
   color: inherit;
-}
-
-.splash-screen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 999999;
-  background-color: #090c1b;
-  animation: splash-screen-animation 3s ease-out forwards;
-  pointer-events: none;
-}
-
-@keyframes splash-screen-animation {
-  to {
-    opacity: 0;
-    transform: scale(25);
-  }
-}
-
-.splash-screen-title {
-  width: max-content;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
-  z-index: 1000000;
-  background: linear-gradient(-45deg, #343a40, #d0ebff);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-size: 350%;
-  animation: splash-screen-title-animation 3s ease-in-out;
-  pointer-events: none;
-}
-
-@keyframes splash-screen-title-animation {
-  0% {
-    background-position: 0% 50%;
-    opacity: 1;
-  }
-  25% {
-    background-position: 100% 50%;
-  }
-  50% {
-    background-position: 0% 50%;
-    opacity: 0.7;
-  }
-  75% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-    opacity: 1;
-  }
 }
 
 /* nav and header */
@@ -659,10 +602,6 @@ footer #contact-footer #number-1-footer {
     gap: 4rem;
   }
 
-  .splash-screen-title {
-    font-size: 1rem;
-  }
-
   #vh-ground {
     width: 100vw;
     height: 100vh;
@@ -912,10 +851,6 @@ footer #contact-footer #number-1-footer {
 }
 
 @media (min-width: 576px) and (max-width: 991px) {
-  .splash-screen-title {
-    font-size: 2rem;
-  }
-
   #vh-ground {
     width: 100vw;
     height: 100vh;
@@ -1187,10 +1122,6 @@ footer #contact-footer #number-1-footer {
     gap: 6rem;
   }
 
-  .splash-screen-title {
-    font-size: 2.2rem;
-  }
-
   #vh-ground {
     width: 100vw;
     height: 100vh;
@@ -1416,10 +1347,6 @@ footer #contact-footer #number-1-footer {
 }
 
 @media (width: 1024px) and (height: 600px) {
-  .splash-screen-title {
-    font-size: 2.2rem;
-  }
-
   #vh-ground {
     background-position: 0;
     margin-bottom: 6rem;
@@ -1430,10 +1357,6 @@ footer #contact-footer #number-1-footer {
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
-  .splash-screen-title {
-    font-size: 2.5rem;
-  }
-
   #vh-ground {
     width: 100vw;
     height: 100vh;
@@ -1650,10 +1573,6 @@ footer #contact-footer #number-1-footer {
 }
 
 @media (min-width: 1400px) and (max-width: 1599px) {
-  .splash-screen-title {
-    font-size: 2.5rem;
-  }
-
   #vh-ground {
     width: 100vw;
     height: 100vh;

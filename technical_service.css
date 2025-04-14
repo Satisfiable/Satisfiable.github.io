@@ -12,6 +12,7 @@ body {
   font-family: "Noto Sans", serif;
   height: 100%;
   display: flex;
+  overflow-x: hidden;
   flex-direction: column;
   justify-content: space-between;
   gap: 8rem;

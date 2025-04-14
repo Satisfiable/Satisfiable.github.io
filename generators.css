@@ -11,6 +11,7 @@ html {
 body {
   font-family: "Noto Sans", serif;
   height: 100%;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -18,7 +19,6 @@ body {
   background-color: #090c1b;
   color: #efefef;
   position: relative;
-  overflow-x: hidden;
 }
 
 a:link {
